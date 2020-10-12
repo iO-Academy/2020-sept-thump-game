@@ -1,2 +1,1 @@
-# year-cohort-projectName
-project template repo
+# 2020-sept-thump-game
