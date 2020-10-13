@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 * {
     margin: auto;
     box-sizing: border-box;
@@ -9,6 +11,7 @@ body {
     margin: auto;
     height: 100vh;
     background-color: green;
+    font-family: "Rock Salt", cursive;
 }
 
 header {
@@ -36,67 +39,27 @@ section {
 }
 
 .building {
-    /*z-index: 5;*/
+    z-index: 5;
 }
 
-.trump01 {
-    grid-column: 1/2;
-    grid-row: 1/2;
+.trump01, .building01, .trump02, .building02, .trump03, .building03 {
+    grid-row: 1;
 }
 
-.building01 {
-    grid-column: 1/2;
-    grid-row: 1/2;
+.trump04, .building04, .trump05, .building05, .trump06, .building06 {
+    grid-row: 2;
 }
 
-.trump02 {
-    grid-column: 2/3;
-    grid-row: 1/2;
+.trump01, .building01, .trump04, .building04 {
+    grid-column: 1;
 }
 
-.building02 {
-    grid-column: 2/3;
-    grid-row: 1/2;
+.trump02, .building02, .trump05, .building05 {
+    grid-column: 2;
 }
 
-.trump03 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-.building03 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-.trump04 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.building04 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.trump05 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-.building05 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-.trump06 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-.building06 {
-    grid-column: 3/4;
-    grid-row: 1/2;
+.trump03, .building03, .trump06, .building06 {
+    grid-column: 3;
 }
 
 .trump01 img {
