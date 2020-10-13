@@ -8,19 +8,29 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: auto;
     height: 100vh;
     background-color: green;
     font-family: "Rock Salt", cursive;
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     position: absolute;
     width: 100%;
+    height: 15%;
+    color: navy;
+    background-color: deepskyblue;
+}
+
+header span {
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
     height: 50px;
-    color: #fff;
-    background-color: #000;
+    border-radius: 50%;
+    background: url("images/cloud.svg") no-repeat center/contain;
 }
 
 main {
@@ -36,6 +46,10 @@ section {
 .trump, .building {
     justify-self: center;
     align-self: center;
+}
+
+.trump {
+    transition: 1s;
 }
 
 .building {
@@ -76,37 +90,4 @@ section {
 
 .trump.animate {
     position: relative;
-}
-
-.trump01.animateLeft {
-    left: -20%;
-    top: -20%;
-    transform: rotate(-45deg);
-}
-
-.trump01.animateRight {
-    right: -20%;
-    top: -20%;
-    transform: rotate(45deg);
-}
-
-.trump01.animateTop {
-    top: -40%;
-}
-
-.trump02.animateLeft {
-    left: -20%;
-    top: -20%;
-    transform: rotate(-45deg);
-}
-
-.trump02.animateRight {
-    right: -20%;
-    top: -20%;
-    transform: rotate(45deg);
-}
-
-.trump02.animateTop {
-    top: -70%;
-    transform: rotate(-30deg);
 }
