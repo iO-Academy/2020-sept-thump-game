@@ -38,8 +38,13 @@ section {
     align-self: center;
 }
 
+.trump {
+    pointer-events: auto;
+}
+
 .building {
     z-index: 5;
+    pointer-events: none;
 }
 
 .trump01, .building01, .trump02, .building02, .trump03, .building03 {
