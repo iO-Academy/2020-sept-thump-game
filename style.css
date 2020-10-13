@@ -1,93 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 * {
-    margin: auto;
-    box-sizing: border-box;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: green;
-    font-family: "Rock Salt", cursive;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: green;
+  font-family: 'Rock Salt', cursive;
+  overflow-x: hidden;
 }
 
 header {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    color: navy;
-    background-color: deepskyblue;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  color: navy;
+
+  background: url('images/hill.svg') no-repeat center bottom;
+  background-color: deepskyblue;
 }
 
 header span {
-    display: inline-block;
-    text-align: center;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: url("images/cloud.svg") no-repeat center/contain;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('images/cloud.svg') no-repeat
+    center/contain;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
 }
+
+/* main:before {
+  content: '';
+  top: 0;
+  height: 50px;
+  width: 100vw;
+  background: url('images/hill.svg') repeat-x;
+} */
 
 section {
-    display: grid;
+  display: grid;
 }
 
-.trump, .building {
-    justify-self: center;
-    align-self: center;
+.trump,
+.building {
+  justify-self: center;
+  align-self: center;
 }
 
 .trump {
-    transition: 1s;
+  transition: 1s;
 }
 
 .building {
-    z-index: 5;
+  z-index: 5;
 }
 
-.trump01, .building01, .trump02, .building02, .trump03, .building03 {
-    grid-row: 1;
+.trump01,
+.building01,
+.trump02,
+.building02,
+.trump03,
+.building03 {
+  grid-row: 1;
 }
 
-.trump04, .building04, .trump05, .building05, .trump06, .building06 {
-    grid-row: 2;
+.trump04,
+.building04,
+.trump05,
+.building05,
+.trump06,
+.building06 {
+  grid-row: 2;
 }
 
-.trump01, .building01, .trump04, .building04 {
-    grid-column: 1;
+.trump01,
+.building01,
+.trump04,
+.building04 {
+  grid-column: 1;
 }
 
-.trump02, .building02, .trump05, .building05 {
-    grid-column: 2;
+.trump02,
+.building02,
+.trump05,
+.building05 {
+  grid-column: 2;
 }
 
-.trump03, .building03, .trump06, .building06 {
-    grid-column: 3;
+.trump03,
+.building03,
+.trump06,
+.building06 {
+  grid-column: 3;
 }
 
 .trump01 img {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .trump02 img {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .trump05 img {
-    transform: rotate(-40deg);
+  transform: rotate(-40deg);
 }
 
 .trump.animate {
-    position: relative;
+  position: relative;
 }
