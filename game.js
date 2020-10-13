@@ -11,7 +11,7 @@
 // visibleTrump();
 
 
-var trumps = document.querySelectorAll('.trump');
+// var trumps = document.querySelectorAll('.trump');
 var building = document.querySelectorAll('.building');
 //var scores =
 
@@ -20,22 +20,27 @@ function randTime(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function getPosition() {
     var positions = ['animateTop', 'animateLeft', 'animateRight'];
-    var length = positions.length;
-    var idx = Math.floor(Math.random() * (length - 1));
-    return positions[idx];
-}
-var randPosition = getPosition();
+    var trumps = ['.trump01','.trump02','.trump03','.trump04','.trump05','.trump06']
 
-function randTrump(randPosition) {
-    var time = randTime(1000, 2000);
+function getRandom(array) {
+    var length = array.length;
+    var idx = Math.floor(Math.random() * length);
+    return array[idx];
+}
+
+function randTrump() {
     setInterval(() => {
-        trumps.forEach((trump) => {
-            trump.classList.add('animate', randPosition);
-        })
-    }, time);
+            var randomTrump = document.querySelector(getRandom(trumps))
+            var randPosition = getRandom(positions);
+            randomTrump.classList.add('animate', randPosition);
+            setTimeout(() => {
+                randomTrump.classList.remove('animate', randPosition);
+                }
+            ,1000)
+            // console.log(trump.classList)
+    }, randTime(1000, 2000));
 
 }
 
-randTrump(randPosition);
+randTrump();
