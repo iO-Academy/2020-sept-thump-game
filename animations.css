@@ -1,4 +1,30 @@
 
+/*.trumpy {*/
+/*    position: absolute;*/
+/*    width: 200px;*/
+/*    top: 20%;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    animation: float 10s linear infinite;*/
+/*}*/
+
+/*@keyframes float {*/
+/*    0%  { transform: rotate(0deg) translateX(150px); }*/
+/*    100%{ transform: rotate(360deg) translateX(150px); }*/
+/*}*/
+
+.trumpy {
+    position: absolute;
+    height: 60vh;
+    left: -20vw;
+    transform: rotate(-10deg);
+    transition: all 1s;
+}
+
+.trumpy:hover {
+    left: -50vw;
+}
+
 .trump01.animateLeft {
     left: -20%;
     top: -20%;
