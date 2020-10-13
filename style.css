@@ -1,4 +1,27 @@
 * {
+    margin: auto;
     box-sizing: border-box;
 }
 
+body {
+    margin: auto;
+    background-color: green;
+}
+
+header {
+    background-color: black;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+}
+
+section {
+    display: grid;
+}
+
+.building, .trump {
+    align-self: center;
+}
