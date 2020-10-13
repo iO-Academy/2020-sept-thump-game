@@ -6,11 +6,16 @@
   font-family: 'Rock Salt', cursive;
 }
 
+a:visited,
+a:hover,
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  background-color: green;
+  background-color: #008000;
   font-family: 'Rock Salt', cursive;
   text-align: center;
   overflow-x: hidden;
@@ -18,16 +23,14 @@ body {
 
 header {
   display: flex;
-  position: absolute;
   width: 100%;
   height: 20%;
-  color: navy;
+  color: #000080;
   background: deepskyblue url('images/hill.svg') no-repeat center bottom;
 }
 
 header span {
   display: inline-block;
-  text-align: center;
   line-height: 50px;
   width: 50px;
   height: 50px;
@@ -37,7 +40,6 @@ header span {
 }
 
 ol {
-  text-align: center;
   list-style-position: inside;
   line-height: 2em;
   padding: 0;
