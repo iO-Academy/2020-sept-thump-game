@@ -68,15 +68,6 @@ ol {
   margin-bottom: 10px;
 }
 
-.trump {
-    pointer-events: auto;
-}
-
-.building {
-  z-index: 5;
-  pointer-events: none;
-}
-
 h1 {
   width: 100%;
   font-size: 50px;
@@ -116,10 +107,12 @@ section {
 
 .trump {
   transition: 1s;
+  pointer-events: auto;
 }
 
 .building {
   z-index: 5;
+  pointer-events: none;
 }
 
 .trump01,
