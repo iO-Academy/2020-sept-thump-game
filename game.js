@@ -9,14 +9,8 @@
  *          Random number
  */
 function randTime(min, max) {
-    return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
-
-// Available classes for trump position
-var positions = ['animateTop', 'animateLeft', 'animateRight'];
-
-// Available classes for trumps
-var trumps = ['.trump01','.trump02','.trump03','.trump04','.trump05','.trump06']
 
 /**
  * Provides single random element from supplied array
@@ -28,12 +22,29 @@ var trumps = ['.trump01','.trump02','.trump03','.trump04','.trump05','.trump06']
  *             Random element
  */
 function getRandom(array) {
-    var length = array.length;
-    var idx = Math.floor(Math.random() * length);
-    return array[idx];
+  let length = array.length;
+  let idx = Math.floor(Math.random() * length);
+  return array[idx];
 }
 
+// Available classes for trump position
+const positions = [
+    'animateTop',
+    'animateLeft',
+    'animateRight'
+];
 
+// Available classes for trumps
+const trumps = [
+    '.trump01',
+    '.trump02',
+    '.trump03',
+    '.trump04',
+    '.trump05',
+    '.trump06'
+];
+
+// Starts random trump appearance
 let gameActive = setInterval(() => {
     let randomTrump = document.querySelector(getRandom(trumps))
     let randPosition = getRandom(positions);
@@ -43,16 +54,16 @@ let gameActive = setInterval(() => {
         },1500)
 }, randTime(2000, 4000));
 
-
 let trumpsDiv = document.querySelectorAll('.trump');
 let score = 0;
 
-//Wrap in if statement to check if trump is popped up first
-trumpsDiv.forEach(trump => trump.addEventListener('click', () => {
+// Animates on click and adds to score
+trumpsDiv.forEach(trump =>
+  trump.addEventListener('click', () => {
     if (trump.classList.contains('animate')) {
-        trump.classList.remove('animate');
-        score += 1;
-        document.querySelector('.score').textContent = score;
+      trump.classList.remove('animate');
+      score += 1;
+      document.querySelector('.score').textContent = score;
     }
 }))
 
@@ -64,6 +75,7 @@ let gif = document.querySelector(".gif img")
 let title
 let message
 
+// Starts countdown and displays game over popup at end
 let timer = document.querySelector('.timer').textContent;
 let countdown = setInterval(() => {
     timer--;
