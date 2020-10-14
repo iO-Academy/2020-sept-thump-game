@@ -11,7 +11,4 @@ setTimeout(() => {
 
 
 
-// 3. once the countdown finishes, the game starts
-
-
 
