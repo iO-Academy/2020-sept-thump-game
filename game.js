@@ -9,14 +9,8 @@
  *          Random number
  */
 function randTime(min, max) {
-    return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
-
-// Available classes for trump position
-var positions = ['animateTop', 'animateLeft', 'animateRight'];
-
-// Available classes for trumps
-var trumps = ['.trump01','.trump02','.trump03','.trump04','.trump05','.trump06']
 
 /**
  * Provides single random element from supplied array
@@ -28,9 +22,9 @@ var trumps = ['.trump01','.trump02','.trump03','.trump04','.trump05','.trump06']
  *             Random element
  */
 function getRandom(array) {
-    var length = array.length;
-    var idx = Math.floor(Math.random() * length);
-    return array[idx];
+  let length = array.length;
+  let idx = Math.floor(Math.random() * length);
+  return array[idx];
 }
 
 /**
@@ -38,15 +32,33 @@ function getRandom(array) {
  *
  */
 function randTrump() {
-    setInterval(() => {
-        var randomTrump = document.querySelector(getRandom(trumps))
-        var randPosition = getRandom(positions);
-        randomTrump.classList.add('animate', randPosition);
-        setTimeout(() => {
-                randomTrump.classList.remove('animate', randPosition);
-            },1500)
-        console.log(randomTrump)
-    }, randTime(2000, 4000));
+  // Available classes for trump position
+  const positions = [
+    'animateTop',
+    'animateLeft',
+    'animateRight'
+  ];
+
+  // Available classes for trumps
+  const trumps = [
+    '.trump01',
+    '.trump02',
+    '.trump03',
+    '.trump04',
+    '.trump05',
+    '.trump06'
+  ];
+  setInterval(() => {
+    let randomTrump = document.querySelector(
+      getRandom(trumps)
+    );
+    let randPosition = getRandom(positions);
+    randomTrump.classList.add('animate', randPosition);
+    setTimeout(() => {
+      randomTrump.classList.remove('animate', randPosition);
+    }, 1500);
+    console.log(randomTrump);
+  }, randTime(2000, 4000));
 }
 
 randTrump();
@@ -55,11 +67,12 @@ let trumpsDiv = document.querySelectorAll('.trump');
 let score = 0;
 
 //Wrap in if statement to check if trump is popped up first
-trumpsDiv.forEach(trump => trump.addEventListener('click', () => {
+trumpsDiv.forEach((trump) =>
+  trump.addEventListener('click', () => {
     if (trump.classList.contains('animate')) {
-        trump.classList.remove('animate');
-        score += 1;
-        document.querySelector('.score').textContent = score;
+      trump.classList.remove('animate');
+      score += 1;
+      document.querySelector('.score').textContent = score;
     }
-}))
-
+  })
+);
