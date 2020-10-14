@@ -1,75 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Thump-a-Trump</title>
-    <link rel="stylesheet" type="text/css" href="normalize.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="animations.css"/>
     <script async defer src="game.js"></script>
 </head>
-<body>
-
-<header>
-    <div>
-        <div>SCORE: <span class="score">0</span></div>
-    </div>
-    <div>
-        TIMER
-    </div>
-</header>
-
-<main>
-
-    <section>
+  <body>
+    <header>
+      <div>SCORE: <span class="score">0</span></div>
+      <div>TIME: <span class="timer">30</span> s</div>
+      <section class="sky">
+        <img src="images/cloud.svg" alt="Cloud" />
+        <img src="images/cloud.svg" alt="Cloud" />
+      </section>
+    </header>
+    <main>
+      <section>
         <div class="building building01">
-            <img src="images/blueTriangle.svg" alt="" />
+          <img src="images/blueTriangle.svg" alt="Building" />
         </div>
-        <div class="trump trump01 animate animateTop">
-            <img src="images/trump01.svg" alt="" />
+        <div class="trump trump01 animate animateLeft">
+          <img src="images/trump01.svg" alt="Trump" />
         </div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="building building02">
-            <img class="mound" src="images/mound.svg" alt="" />
+          <img class="mound" src="images/mound.svg" alt="Building"/>
         </div>
         <div class="trump trump02 animate animateTop">
-            <img src="images/trump03.svg" alt="" />
+          <img src="images/trump03.svg" alt="Trump" />
         </div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="building building03">
-            <img src="images/squareBuilding1.svg" alt="" />
+          <img src="images/squareBuilding1.svg" alt="Building" />
         </div>
-        <div class="trump trump03">
-            <img src="images/trump03.svg" alt="" />
+        <div class="trump trump03 animate animateRight">
+          <img src="images/trump03.svg" alt="Trump" />
         </div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="building building04">
-            <img src="images/squareBuilding2.svg" alt="" />
+          <img src="images/squareBuilding2.svg" alt="Building" />
         </div>
-        <div class="trump trump04">
-            <img src="images/trump02.svg" alt="" />
+        <div class="trump trump04 animate animateTop">
+          <img src="images/trump02.svg" alt="Trump" />
         </div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="building building05">
-            <img src="images/windmill.svg" alt="" />
+          <img src="images/windmill.svg" alt="Building" />
         </div>
-        <div class="trump trump05">
-            <img src="images/trump01.svg" alt="" />
+        <div class="trump trump05 animate animateRight">
+          <img src="images/trump01.svg" alt="Trump" />
         </div>
-    </section>
-    <section>
+      </section>
+      <section>
         <div class="building building06">
-            <img src="images/threeTriangles.svg" alt="" />
+          <img src="images/threeTriangles.svg" alt="Building" />
         </div>
-        <div class="trump trump06">
-            <img src="images/trump02.svg" alt="" />
+        <div class="trump trump06 animate animateTop">
+          <img src="images/trump02.svg" alt="Trump" />
         </div>
-    </section>
-
-</main>
-
-</body>
+      </section>
+    </main>
+  </body>
 </html>
