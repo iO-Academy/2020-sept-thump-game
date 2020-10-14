@@ -48,12 +48,7 @@ ol {
   padding: 0;
 }
 
-button {
-  display: inline-block;
-  appearance: none;
-  background: none;
-  border: none;
-  margin: 0;
+.startBtn {
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
@@ -63,18 +58,16 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-
-button:active {
+.startBtn:active {
   transform: scale(0.90);
 }
-
-button:hover {
+.startBtn:hover {
   filter: invert(50%) sepia(8%) saturate(7419%) hue-rotate(100deg);
 }
-
 .startImg {
+  display: block;
   max-width: 80px;
-  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
