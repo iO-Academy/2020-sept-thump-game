@@ -1,0 +1,30 @@
+.countdownContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    z-index: 15;
+}
+.countdown {
+    width: 60%;
+    height: 80%;
+    background-color: #ffa500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdownContainer.endCountdown {
+    display: none;
+}
+
+
+.countdown div {
+    height: 100px;
+}
