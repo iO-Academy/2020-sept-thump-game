@@ -6,28 +6,32 @@
   font-family: 'Rock Salt', cursive;
 }
 
+a:visited,
+a:hover,
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  background-color: green;
+  background-color: #008000;
   font-family: 'Rock Salt', cursive;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 header {
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 20%;
-  color: navy;
+  color: #000080;
   background: deepskyblue url('images/hill.svg') no-repeat center bottom;
 }
 
 header span {
   display: inline-block;
-  text-align: center;
   line-height: 50px;
   width: 50px;
   height: 50px;
@@ -37,18 +41,12 @@ header span {
 }
 
 ol {
-  text-align: center;
   list-style-position: inside;
   line-height: 2em;
   padding: 0;
 }
 
-button {
-  display: inline-block;
-  appearance: none;
-  background: none;
-  border: none;
-  margin: 0;
+.startBtn {
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
@@ -57,19 +55,18 @@ button {
   transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  outline: none;
 }
-
-button:active {
+.startBtn:active {
   transform: scale(0.90);
 }
-
-button:hover {
+.startBtn:hover {
   filter: invert(50%) sepia(8%) saturate(7419%) hue-rotate(100deg);
 }
-
 .startImg {
+  display: block;
   max-width: 80px;
-  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -93,6 +90,7 @@ li {
 }
 
 main {
+  margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 80%;
@@ -110,10 +108,12 @@ section {
 
 .trump {
   transition: 1s;
+  pointer-events: auto;
 }
 
 .building {
   z-index: 5;
+  pointer-events: none;
 }
 
 .trump01,
@@ -169,4 +169,41 @@ section {
 
 .trump.animate {
   position: relative;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  display: flex;
+  visibility: hidden;
+  justify-content: space-around;
+  z-index: 15;
+}
+
+.modal {
+  width: 60%;
+  height: 80%;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.gif img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.newGame {
+  background: green;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.newGame:hover {
+  background-color: darkgreen;
+  filter: none;
 }
