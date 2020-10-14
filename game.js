@@ -1,7 +1,5 @@
 let trumps = document.querySelectorAll('.trump');
 let score = 0;
-console.log(score);
-
 
 //Wrap in if statement to check if trump is popped up first
 trumps.forEach(trump => trump.addEventListener('click', () => {
