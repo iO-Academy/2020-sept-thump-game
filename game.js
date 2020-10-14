@@ -56,9 +56,9 @@ function randTrump() {
     randomTrump.classList.add('animate', randPosition);
     setTimeout(() => {
       randomTrump.classList.remove('animate', randPosition);
-    }, 1500);
+    }, randTime(600, 1200));
     console.log(randomTrump);
-  }, randTime(2000, 4000));
+  }, randTime(1000, 2000));
 }
 
 randTrump();
