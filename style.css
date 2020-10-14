@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+* {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Rock Salt', cursive;
+}
+
+a:visited,
+a:hover,
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+body {
+  height: 100vh;
+  background-color: #008000;
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  color: #000080;
+  background: deepskyblue url('images/hill.svg') no-repeat center bottom;
+}
+
+header span {
+  display: inline-block;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('images/cloud.svg') no-repeat
+    center/contain;
+}
+
+ol {
+  list-style-position: inside;
+  line-height: 2em;
+  padding: 0;
+}
+
+.startBtn {
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+  color 250ms ease-in-out,
+  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.startBtn:active {
+  transform: scale(0.90);
+}
+.startBtn:hover {
+  filter: invert(50%) sepia(8%) saturate(7419%) hue-rotate(100deg);
+}
+.startImg {
+  display: block;
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  width: 100%;
+  font-size: 50px;
+  line-height: 40px;
+}
+
+.menuScreen {
+  z-index: 10;
+  margin-top: 200px;
+}
+
+.menuScreen div {
+  margin: 20px 0;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+}
+
+main {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+}
+
+section {
+  display: grid;
+}
+
+.trump,
+.building {
+  justify-self: center;
+  align-self: center;
+}
+
+.trump {
+  transition: 1s;
+}
+
+.building {
+  z-index: 5;
+}
+
+.trump01,
+.building01,
+.trump02,
+.building02,
+.trump03,
+.building03 {
+  grid-row: 1;
+}
+
+.trump04,
+.building04,
+.trump05,
+.building05,
+.trump06,
+.building06 {
+  grid-row: 2;
+}
+
+.trump01,
+.building01,
+.trump04,
+.building04 {
+  grid-column: 1;
+}
+
+.trump02,
+.building02,
+.trump05,
+.building05 {
+  grid-column: 2;
+}
+
+.trump03,
+.building03,
+.trump06,
+.building06 {
+  grid-column: 3;
+}
+
+.trump01 img {
+  transform: rotate(-45deg);
+}
+
+.trump02 img {
+  transform: rotateY(180deg);
+}
+
+.trump05 img {
+  transform: rotate(-40deg);
+}
+
+.trump.animate {
+  position: relative;
+}
