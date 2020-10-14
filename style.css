@@ -107,10 +107,12 @@ section {
 
 .trump {
   transition: 1s;
+  pointer-events: auto;
 }
 
 .building {
   z-index: 5;
+  pointer-events: none;
 }
 
 .trump01,
