@@ -169,3 +169,17 @@ section {
 .trump.animate {
   position: relative;
 }
+
+
+#pango {
+  width: 70px;
+}
+
+footer p {
+  /*line-height: 100px;*/
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 80px;
+}
