@@ -12,6 +12,20 @@ function randTime(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+let visibleTime = function(score) {
+    let time;
+    if (score < 4) {
+        time = 1500;
+    } else if (score < 8) {
+        time = 1000;
+    } else {
+        time = 750;
+    }
+    console.log(time);
+    return time;
+}
+
+
 /**
  * Provides single random element from supplied array
  *
@@ -54,7 +68,7 @@ let randTrump = () => {
         randomTrump.classList.add('animate', randPosition);
         setTimeout(() => {
             randomTrump.classList.remove('animate', randPosition);
-        }, 1500)
+        }, visibleTime(score))
     }, randTime(500, 2000))
 }
 
@@ -104,7 +118,7 @@ let countdown = setInterval(() => {
                 message = "You only got me once looooser";
                 gif.src = "https://media.giphy.com/media/wJNGA01o1Zxp6/source.gif";
                 break;
-            case score < 15:
+            case score < 10:
                 title = "DAAAMN";
                 message = `You thumped me ${score} times!`;
                 gif.src = "https://media.giphy.com/media/6L015gMEW3pFC/source.gif";
