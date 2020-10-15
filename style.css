@@ -4,6 +4,10 @@
   margin: auto;
   box-sizing: border-box;
   font-family: 'Rock Salt', cursive;
+  cursor: url('images/club.cur'), pointer;
+}
+*:active {
+  cursor: url('images/club1.cur'), pointer;
 }
 
 a:visited,
@@ -27,7 +31,8 @@ header {
   width: 100%;
   height: 20%;
   color: #000080;
-  background: deepskyblue url('images/hill.svg') no-repeat center bottom;
+  background: deepskyblue url('images/hill.svg') no-repeat
+    center bottom;
 }
 
 header span {
@@ -51,22 +56,27 @@ ol {
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out,
-  color 250ms ease-in-out,
-  transform 150ms ease;
+    color 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
+  grid-column-start: 2;
 }
 .startBtn:active {
-  transform: scale(0.90);
+  transform: scale(0.9);
 }
 .startBtn:hover {
-  filter: invert(50%) sepia(8%) saturate(7419%) hue-rotate(100deg);
+  filter: invert(50%) sepia(8%) saturate(7419%)
+    hue-rotate(100deg);
 }
 .startImg {
   display: block;
   max-width: 80px;
   margin-bottom: 10px;
+}
+
+.instructions {
+  grid-column-start: 2;
 }
 
 h1 {
@@ -78,6 +88,8 @@ h1 {
 .menuScreen {
   z-index: 10;
   margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menuScreen div {
@@ -100,6 +112,14 @@ section {
   display: grid;
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .trump,
 .building {
   justify-self: center;
@@ -107,13 +127,14 @@ section {
 }
 
 .trump {
-  transition: 1s;
+  transition: 0.5s;
   pointer-events: auto;
 }
 
 .building {
   z-index: 5;
   pointer-events: none;
+  position: relative;
 }
 
 .trump01,
@@ -176,7 +197,7 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   visibility: hidden;
@@ -206,4 +227,28 @@ section {
 .newGame:hover {
   background-color: darkgreen;
   filter: none;
+}
+
+.building01:before {
+  content: url('images/flag1.svg');
+  position: absolute;
+  left: -25%;
+  top: 70%;
+}
+.building02:before {
+  content: url('images/flag2.svg');
+  position: absolute;
+  right: -30%;
+}
+.building05:before {
+  content: url('images/flag3.svg');
+  position: absolute;
+  top: 40%;
+  left: -20%;
+}
+.building06:before {
+  content: url('images/flag4.svg');
+  position: absolute;
+  top: 3%;
+  right: -30%;
 }

@@ -12,6 +12,20 @@ function randTime(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+let visibleTime = function(score) {
+    let time;
+    if (score < 4) {
+        time = 1500;
+    } else if (score < 8) {
+        time = 1000;
+    } else {
+        time = 750;
+    }
+    console.log(time);
+    return time;
+}
+
+
 /**
  * Provides single random element from supplied array
  *
@@ -68,7 +82,7 @@ let randTrump = () => {
         randomTrump.classList.add('animate', randPosition);
         setTimeout(() => {
             randomTrump.classList.remove('animate', randPosition);
-        }, 1500)
+        }, visibleTime(score))
     }, randTime(500, 2000))
 }
 
