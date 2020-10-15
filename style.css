@@ -56,6 +56,7 @@ ol {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
+  grid-column-start: 2;
 }
 .startBtn:active {
   transform: scale(0.90);
@@ -69,6 +70,10 @@ ol {
   margin-bottom: 10px;
 }
 
+.instructions {
+  grid-column-start: 2;
+}
+
 h1 {
   width: 100%;
   font-size: 50px;
@@ -78,6 +83,8 @@ h1 {
 .menuScreen {
   z-index: 10;
   margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menuScreen div {
@@ -98,6 +105,14 @@ main {
 
 section {
   display: grid;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .trump,
@@ -207,3 +222,4 @@ section {
   background-color: darkgreen;
   filter: none;
 }
+
