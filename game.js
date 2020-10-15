@@ -21,7 +21,7 @@ function randTime(min, max) {
  * @returns time
  *             New length of time Trump is visible
  */
-let visibleTime = function(score) {
+let visibleTime = (score) => {
     let time;
     if (score < 4) {
         time = 1500;
