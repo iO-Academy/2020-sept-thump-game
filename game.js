@@ -83,7 +83,8 @@ let message;
 
 // Starts countdown and displays game over popup at end
 let timer = document.querySelector('.timer').textContent;
-let countdown = setInterval(() => {
+function countdown() {
+ setInterval(() => {
     timer--;
     document.querySelector('.timer').textContent = timer;
     if (timer <= 0) {
@@ -118,3 +119,5 @@ let countdown = setInterval(() => {
         gameOverMess.textContent = message;
     }
 }, 1000);
+}
+

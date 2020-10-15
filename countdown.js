@@ -7,6 +7,7 @@ const inter = setInterval(() => {
 setTimeout(() => {
     clearInterval(inter);
     document.querySelector('.countdownContainer').classList.add('endCountdown');
+    countdown()
 }, 6000);
 
 
