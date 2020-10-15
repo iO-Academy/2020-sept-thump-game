@@ -34,6 +34,13 @@ header {
   background: #00bfff url('images/hill.svg') no-repeat center bottom;
 }
 
+.menuScreen:after {
+  content: url("images/flag4.svg");
+  position: relative;
+  top: -145%;
+  right: -30%;
+}
+
 header span {
   display: inline-block;
   line-height: 50px;
