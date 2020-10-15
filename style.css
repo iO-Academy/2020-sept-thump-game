@@ -6,6 +6,7 @@
   font-family: 'Rock Salt', cursive;
   cursor: url('images/club.cur'), pointer;
 }
+
 *:active {
   cursor: url('images/club1.cur'), pointer;
 }
@@ -47,8 +48,7 @@ header span {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: url('images/cloud.svg') no-repeat
-    center/contain;
+  background: url('images/cloud.svg') no-repeat center/contain;
 }
 
 ol {
@@ -61,20 +61,21 @@ ol {
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out,
-    color 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
   grid-column-start: 2;
 }
+
 .startBtn:active {
   transform: scale(0.9);
 }
+
 .startBtn:hover {
-  filter: invert(50%) sepia(8%) saturate(7419%)
-    hue-rotate(100deg);
+  filter: invert(50%) sepia(8%) saturate(7419%)  hue-rotate(100deg);
 }
+
 .startImg {
   display: block;
   max-width: 80px;
@@ -198,32 +199,12 @@ img {
   position: relative;
 }
 
-.modalContainer {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: flex;
-  visibility: hidden;
-  justify-content: space-around;
-  z-index: 15;
-}
-
-.modal {
-  width: 60%;
-  height: 80%;
-  background-color: orange;
-  display: flex;
-  flex-direction: column;
-}
-
 .gif img {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
+
 .newGame {
   background: green;
   padding: 10px;
@@ -241,17 +222,20 @@ img {
   left: -25%;
   top: 70%;
 }
+
 .building02:before {
   content: url('images/flag2.svg');
   position: absolute;
   right: -30%;
 }
+
 .building05:before {
   content: url('images/flag3.svg');
   position: absolute;
   top: 40%;
   left: -20%;
 }
+
 .building06:before {
   content: url('images/flag4.svg');
   position: absolute;
@@ -299,26 +283,45 @@ header div {
   z-index: 4;
 }
 
-.countdownContainer {
-  position: fixed;
+.modalContainer, .countdownContainer {
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   justify-content: space-around;
-  align-content: center;
   z-index: 15;
 }
 
-.countdown {
+.modal, .countdown {
   width: 60%;
   height: 80%;
   background-color: #ffa500;
   display: flex;
   flex-direction: column;
+}
+
+.modalContainer {
+  position: absolute;
+  visibility: hidden;
+}
+
+.modal {
+  width: 60%;
+  height: 80%;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdownContainer {
+  position: fixed;
+  left: 0;
+  align-content: center;
+}
+
+.countdown {
   align-items: center;
 }
 
