@@ -228,7 +228,6 @@ img {
   filter: none;
 }
 
-<<<<<<< HEAD
 .building01:before {
   content: url('images/flag1.svg');
   position: absolute;
@@ -252,7 +251,7 @@ img {
   top: 3%;
   right: -30%;
 }
-=======
+
 #pango {
   width: 70px;
 }
@@ -323,4 +322,3 @@ header div {
 .countdown div {
   height: 100px;
 }
->>>>>>> 20587a655f2d692adfdcb8d9b2e5ce0107ccf804
