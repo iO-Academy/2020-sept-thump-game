@@ -16,9 +16,6 @@ a {
 body {
   height: 100vh;
   background-color: #008000;
-  /* background-image: url('images/flag1.svg') space; */
-
-  /* background-position-x: right 32px; */
   font-family: 'Rock Salt', cursive;
   text-align: center;
   overflow-x: hidden;
