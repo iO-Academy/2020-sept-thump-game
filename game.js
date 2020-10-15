@@ -13,6 +13,27 @@ function randTime(min, max) {
 }
 
 /**
+ * Changes amount of time Trump is visible depending on score
+ *
+ * @param score
+ *             Current score
+ *
+ * @returns time
+ *             New length of time Trump is visible
+ */
+let visibleTime = (score) => {
+    let time;
+    if (score < 4) {
+        time = 1500;
+    } else if (score < 8) {
+        time = 1000;
+    } else {
+        time = 750;
+    }
+    return time;
+}
+
+/**
  * Provides single random element from supplied array
  *
  * @param array
@@ -21,7 +42,7 @@ function randTime(min, max) {
  * @returns {*}
  *             Random element
  */
-function getRandom(array) {
+let getRandom = (array) => {
   let length = array.length;
   let idx = Math.floor(Math.random() * length);
   return array[idx];
@@ -68,8 +89,8 @@ let randTrump = () => {
         randomTrump.classList.add('animate', randPosition);
         setTimeout(() => {
             randomTrump.classList.remove('animate', randPosition);
-        }, 1500)
-    }, randTime(500, 2000));
+        }, visibleTime(score))
+    }, randTime(500, 2000))
 }
 
 let trumpsDiv = document.querySelectorAll('.trump');
@@ -79,7 +100,7 @@ let score = 0;
 trumpsDiv.forEach(trump =>
   trump.addEventListener('click', () => {
     if (trump.classList.contains('animate')) {
-      trump.classList.remove('animate');
+      trump.classList.remove('animate', 'animateLeft', 'animateRight', 'animateTop');
       score += 1;
       document.querySelector('.score').textContent = score;
     }

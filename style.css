@@ -4,6 +4,11 @@
   margin: auto;
   box-sizing: border-box;
   font-family: 'Rock Salt', cursive;
+  cursor: url('images/club.cur'), pointer;
+}
+
+*:active {
+  cursor: url('images/club1.cur'), pointer;
 }
 
 a:visited,
@@ -18,7 +23,7 @@ body {
   background-color: #008000;
   font-family: 'Rock Salt', cursive;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -27,8 +32,14 @@ header {
   width: 100%;
   height: 20%;
   color: #000080;
-  background: #00bfff url('images/hill.svg') no-repeat
-    center bottom;
+  background: #00bfff url('images/hill.svg') no-repeat center bottom;
+}
+
+.menuScreen:after {
+  content: url("images/flag4.svg");
+  position: relative;
+  top: -145%;
+  right: -30%;
 }
 
 header span {
@@ -37,8 +48,7 @@ header span {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: url('images/cloud.svg') no-repeat
-    center/contain;
+  background: url('images/cloud.svg') no-repeat center/contain;
 }
 
 ol {
@@ -51,23 +61,29 @@ ol {
   font-size: 2rem;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out,
-    color 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
+  grid-column-start: 2;
 }
+
 .startBtn:active {
   transform: scale(0.9);
 }
+
 .startBtn:hover {
-  filter: invert(50%) sepia(8%) saturate(7419%)
-    hue-rotate(100deg);
+  filter: invert(50%) sepia(8%) saturate(7419%)  hue-rotate(100deg);
 }
+
 .startImg {
   display: block;
   max-width: 80px;
   margin-bottom: 10px;
+}
+
+.instructions {
+  grid-column-start: 2;
 }
 
 h1 {
@@ -78,7 +94,9 @@ h1 {
 
 .menuScreen {
   z-index: 10;
-  margin-top: 200px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menuScreen div {
@@ -101,6 +119,14 @@ section {
   display: grid;
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .trump,
 .building {
   justify-self: center;
@@ -108,13 +134,14 @@ section {
 }
 
 .trump {
-  transition: 1s;
+  transition: 0.5s;
   pointer-events: auto;
 }
 
 .building {
   z-index: 5;
   pointer-events: none;
+  position: relative;
 }
 
 .trump01,
@@ -172,32 +199,12 @@ section {
   position: relative;
 }
 
-.modalContainer {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  text-align: center;
-  display: flex;
-  visibility: hidden;
-  justify-content: space-around;
-  z-index: 15;
-}
-
-.modal {
-  width: 60%;
-  height: 80%;
-  background-color: orange;
-  display: flex;
-  flex-direction: column;
-}
-
 .gif img {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
+
 .newGame {
   background: green;
   padding: 10px;
@@ -207,6 +214,33 @@ section {
 .newGame:hover {
   background-color: darkgreen;
   filter: none;
+}
+
+.building01:before {
+  content: url('images/flag1.svg');
+  position: absolute;
+  left: -25%;
+  top: 70%;
+}
+
+.building02:before {
+  content: url('images/flag2.svg');
+  position: absolute;
+  right: -30%;
+}
+
+.building05:before {
+  content: url('images/flag3.svg');
+  position: absolute;
+  top: 40%;
+  left: -20%;
+}
+
+.building06:before {
+  content: url('images/flag4.svg');
+  position: absolute;
+  top: 3%;
+  right: -30%;
 }
 
 #pango {
@@ -249,26 +283,45 @@ header div {
   z-index: 4;
 }
 
-.countdownContainer {
-  position: fixed;
+.modalContainer, .countdownContainer {
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   justify-content: space-around;
-  align-content: center;
   z-index: 15;
 }
 
-.countdown {
+.modal, .countdown {
   width: 60%;
   height: 80%;
   background-color: #ffa500;
   display: flex;
   flex-direction: column;
+}
+
+.modalContainer {
+  position: absolute;
+  visibility: hidden;
+}
+
+.modal {
+  width: 60%;
+  height: 80%;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdownContainer {
+  position: fixed;
+  left: 0;
+  align-content: center;
+}
+
+.countdown {
   align-items: center;
 }
 
@@ -278,4 +331,125 @@ header div {
 
 .countdown div {
   height: 100px;
+}
+
+.trumpy {
+  position: absolute;
+  height: 60vh;
+  left: -20vw;
+  transform: rotate(-10deg);
+  transition: all 1s;
+}
+
+.trumpy:hover {
+  left: -50vw;
+}
+
+.trump01.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-45deg);
+}
+
+.trump01.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
+}
+
+.trump01.animateTop {
+  transform: translateY(-80%);
+}
+
+.trump02.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-45deg);
+}
+
+.trump02.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
+}
+
+.trump02.animateTop {
+  transform: translateY(-80%) rotate(-30deg);
+}
+
+.trump03.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-45deg);
+}
+
+.trump03.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
+}
+
+.trump03.animateTop {
+  transform: translateY(-80%) rotate(-30deg);
+}
+
+.trump04.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-45deg);
+}
+
+.trump04.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(15deg);
+}
+
+.trump04.animateTop {
+  transform: translateY(-80%) rotate(-30deg);
+}
+
+.trump05.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-80deg);
+}
+
+.trump05.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
+}
+
+.trump05.animateTop {
+  transform: translateY(-80%) rotate(-30deg);
+}
+
+.trump06.animateLeft {
+  transform: translateX(-40%) translateY(-30%)
+  rotate(-20deg);
+}
+
+.trump06.animateRight {
+  transform: translateX(40%) translateY(-30%) rotate(10deg);
+}
+
+.trump06.animateTop {
+  transform: translateY(-80%) rotate(10deg);
+}
+
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+.sky img {
+  position: absolute;
+  height: 50%;
+  animation: weather 60s infinite;
+}
+
+.sky img:nth-child(1) {
+  top: 40%;
+  left: -10px;
+}
+
+.sky img:nth-child(2) {
+  top: 20%;
+  right: -10px;
+  animation-direction: reverse;
+  transform: rotate(180deg);
+}
+
+@keyframes weather {
+  0% { left: 0; }
+  100%   { left: 100vw; }
 }

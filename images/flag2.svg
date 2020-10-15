@@ -7,5 +7,5 @@
 <ellipse transform="matrix(0.9812 -0.1929 0.1929 0.9812 -7.5287 -49.412)" fill="#0B131E" cx="-257.499" cy="13.954" rx="13.667" ry="7.988"/>
 <line fill="none" stroke="#FFF100" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="-259.959" y1="-42.054" x2="-255.04" y2="15.946"/>
 <polygon fill="#FFFFFF" points="-262.627,-42.586 -259.178,-10.177 -289.703,-23.317 "/>
-<text transform="matrix(0.6936 -0.7204 0.7204 0.6936 -269.7729 -20.0532)" fill="#231F20" font-family="'Verdana-Bold'" font-size="12">3</text>
+<text transform="matrix(0.6936 -0.7204 0.7204 0.6936 -269.7729 -20.0532)" fill="#231F20" font-family="Verdana-Bold" font-weight="700" font-size="12">3</text>
 </svg>
