@@ -11,106 +11,82 @@
 }
 
 .trump01.animateLeft {
-  left: -20%;
-  top: -20%;
-  transform: rotate(-45deg);
+transform: translateX(-40%) translateY(-30%)
+    rotate(-45deg);
 }
 
 .trump01.animateRight {
-  right: -20%;
-  top: -20%;
-  transform: rotate(45deg);
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
 }
 
 .trump01.animateTop {
-  top: -40%;
+  transform: translateY(-80%);
 }
 
 .trump02.animateLeft {
-  left: -20%;
-  top: -20%;
-  transform: rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%)
+    rotate(-45deg);
 }
 
 .trump02.animateRight {
-  right: -20%;
-  top: -20%;
-  transform: rotate(45deg);
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
 }
 
 .trump02.animateTop {
-  top: -70%;
-  transform: rotate(-30deg);
+  transform: translateY(-80%) rotate(-30deg);
 }
 
 .trump03.animateLeft {
-  left: -40%;
-  top: -40%;
-  transform: rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%)
+    rotate(-45deg);
 }
 
 .trump03.animateRight {
-  right: -40%;
-  top: -40%;
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
 }
 
 .trump03.animateTop {
-  top: -60%;
-  transform: rotate(-30deg);
+  transform: translateY(-80%) rotate(-30deg);
 }
 
 .trump04.animateLeft {
-  left: -30%;
-  top: -30%;
-  transform: rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%)
+    rotate(-45deg);
 }
 
 .trump04.animateRight {
-  right: -30%;
-  top: -30%;
-  transform: rotate(15deg);
+  transform: translateX(40%) translateY(-30%) rotate(15deg);
 }
 
 .trump04.animateTop {
-  top: -30%;
-  transform: rotate(-30deg);
+  transform: translateY(-80%) rotate(-30deg);
 }
 
 .trump05.animateLeft {
-  left: -30%;
-  transform: rotate(-80deg);
+  transform: translateX(-40%) translateY(-30%)
+    rotate(-80deg);
 }
 
 .trump05.animateRight {
-  right: -35%;
-  top: -10%;
-  transform: rotate(45deg);
+  transform: translateX(40%) translateY(-30%) rotate(45deg);
 }
 
 .trump05.animateTop {
-  top: -40%;
-  transform: rotate(-30deg);
+  transform: translateY(-80%) rotate(-30deg);
 }
 
 .trump06.animateLeft {
-  top: -30%;
-  left: -30%;
-  transform: rotate(-20deg);
+  transform: translateX(-40%) translateY(-30%)
+    rotate(-20deg);
 }
 
 .trump06.animateRight {
-  right: -35%;
-  top: -20%;
-  transform: rotate(10deg);
+  transform: translateX(40%) translateY(-30%) rotate(10deg);
 }
 
 .trump06.animateTop {
-  top: -20%;
-  right: -20%;
-  transform: rotate(10deg);
+  transform: translateY(-80%) rotate(10deg);
 }
-
-/* sky animation idea */
 
 .sky {
   position: absolute;
@@ -127,9 +103,8 @@
 }
 
 .sky img:nth-child(1) {
-  top: 40%;
-  left: -10px;
-  transform: rotate(20deg);
+    top: 40%;
+    left: -10px;
 }
 
 .sky img:nth-child(2) {
@@ -140,10 +115,6 @@
 }
 
 @keyframes weather {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100vw;
-  }
+    0% { left: 0; }
+    100%   { left: 100vw; }
 }

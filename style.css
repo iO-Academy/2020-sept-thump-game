@@ -31,8 +31,7 @@ header {
   width: 100%;
   height: 20%;
   color: #000080;
-  background: deepskyblue url('images/hill.svg') no-repeat
-    center bottom;
+  background: #00bfff url('images/hill.svg') no-repeat center bottom;
 }
 
 header span {
@@ -229,6 +228,7 @@ img {
   filter: none;
 }
 
+<<<<<<< HEAD
 .building01:before {
   content: url('images/flag1.svg');
   position: absolute;
@@ -252,3 +252,75 @@ img {
   top: 3%;
   right: -30%;
 }
+=======
+#pango {
+  width: 70px;
+}
+
+footer p {
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+header div {
+  z-index: 10;
+}
+
+.trump01,
+.trump02,
+.trump03 {
+  z-index: 1;
+}
+
+.trump04,
+.trump05,
+.trump06 {
+  z-index: 3;
+}
+
+.building01,
+.building02,
+.building03 {
+  z-index: 2;
+}
+
+.building04,
+.building05,
+.building06 {
+  z-index: 4;
+}
+
+.countdownContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  z-index: 15;
+}
+
+.countdown {
+  width: 60%;
+  height: 80%;
+  background-color: #ffa500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdownContainer.endCountdown {
+  display: none;
+}
+
+.countdown div {
+  height: 100px;
+}
+>>>>>>> 20587a655f2d692adfdcb8d9b2e5ce0107ccf804
