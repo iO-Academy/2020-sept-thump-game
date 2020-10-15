@@ -19,11 +19,11 @@ a {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #008000;
   font-family: 'Rock Salt', cursive;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
