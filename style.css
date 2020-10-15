@@ -207,3 +207,15 @@ section {
   background-color: darkgreen;
   filter: none;
 }
+
+#pango {
+  width: 70px;
+}
+
+footer p {
+  margin-top: 15px;
+}
+
+footer {
+  margin-top: 80px;
+}
