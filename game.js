@@ -42,7 +42,7 @@ let visibleTime = function(score) {
  * @returns {*}
  *             Random element
  */
-function getRandom(array) {
+let getRandom = (array) => {
   let length = array.length;
   let idx = Math.floor(Math.random() * length);
   return array[idx];
