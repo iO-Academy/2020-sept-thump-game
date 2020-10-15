@@ -219,3 +219,7 @@ footer p {
 footer {
   margin-top: 80px;
 }
+
+header div {
+  z-index: 10;
+}

@@ -127,7 +127,6 @@
 .sky img:nth-child(1) {
     top: 40%;
     left: -10px;
-    transform: rotate(20deg);
 }
 
 .sky img:nth-child(2) {
