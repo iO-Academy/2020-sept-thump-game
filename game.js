@@ -44,6 +44,20 @@ const trumps = [
     '.trump06'
 ];
 
+let timeLeft = 5
+const inter = setInterval(() => {
+    document.querySelector('.countdownTitle h1').textContent = timeLeft;
+    timeLeft--
+}, 1000);
+
+setTimeout(() => {
+    clearInterval(inter);
+    document.querySelector('.countdownContainer').classList.add('endCountdown');
+    countdown();
+    randTrump();
+}, 6000);
+
+
 /**
  * Generates a single random trump appearance
  */
@@ -58,7 +72,6 @@ let randTrump = () => {
     }, randTime(500, 2000))
 }
 
-randTrump();
 let intervalId = setInterval(randTrump, 2000);
 
 let trumpsDiv = document.querySelectorAll('.trump');
@@ -83,41 +96,43 @@ let message;
 
 // Starts countdown and displays game over popup at end
 let timer = document.querySelector('.timer').textContent;
-function countdown() {
- setInterval(() => {
-    timer--;
-    document.querySelector('.timer').textContent = timer;
-    if (timer <= 0) {
-        clearInterval(countdown);
-        trumpsDiv.forEach(trump => {
-            trump.hidden = true;
-        })
-        clearInterval(intervalId);
-        modalContainer.style.visibility = 'visible';
-        switch (true) {
-            case score === 0:
-                title = "LOOOOSER";
-                message = "ahahah I won BIGLY!!";
-                gif.src = "https://media.giphy.com/media/Qjmp5vKEERPyw/source.gif";
-                break;
-            case score === 1:
-                title = "SO CLOOOOOSE";
-                message = "You only got me once looooser";
-                gif.src = "https://media.giphy.com/media/wJNGA01o1Zxp6/source.gif";
-                break;
-            case score < 15:
-                title = "DAAAMN";
-                message = `You thumped me ${score} times!`;
-                gif.src = "https://media.giphy.com/media/6L015gMEW3pFC/source.gif";
-                break;
-            default :
-                title = "FAKE NEWS!!!";
-                message = `You definitely didn't thump me ${score} times!`;
-                gif.src = "https://media.giphy.com/media/mpfMDb6MB6EWQ/giphy.gif";
+let countdown = () => {
+    let innerCountdown = setInterval(() => {
+        timer--;
+        document.querySelector('.timer').textContent = timer;
+        if (timer <= 0) {
+            clearInterval(innerCountdown);
+            trumpsDiv.forEach(trump => {
+                trump.hidden = true;
+            })
+            clearInterval(intervalId);
+            modalContainer.style.visibility = 'visible';
+            switch (true) {
+                case score === 0:
+                    title = "LOOOOSER";
+                    message = "ahahah I won BIGLY!!";
+                    gif.src = "https://media.giphy.com/media/Qjmp5vKEERPyw/source.gif";
+                    break;
+                case score === 1:
+                    title = "SO CLOOOOOSE";
+                    message = "You only got me once looooser";
+                    gif.src = "https://media.giphy.com/media/wJNGA01o1Zxp6/source.gif";
+                    break;
+                case score < 15:
+                    title = "DAAAMN";
+                    message = `You thumped me ${score} times!`;
+                    gif.src = "https://media.giphy.com/media/6L015gMEW3pFC/source.gif";
+                    break;
+                default :
+                    title = "FAKE NEWS!!!";
+                    message = `You definitely didn't thump me ${score} times!`;
+                    gif.src = "https://media.giphy.com/media/mpfMDb6MB6EWQ/giphy.gif";
+            }
+            gameOverTitle.textContent = title;
+            gameOverMess.textContent = message;
         }
-        gameOverTitle.textContent = title;
-        gameOverMess.textContent = message;
-    }
-}, 1000);
+    }, 1000);
 }
+
+
 
