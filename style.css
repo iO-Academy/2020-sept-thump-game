@@ -27,7 +27,7 @@ header {
   width: 100%;
   height: 20%;
   color: #000080;
-  background: deepskyblue url('images/hill.svg') no-repeat
+  background: #00bfff url('images/hill.svg') no-repeat
     center bottom;
 }
 
