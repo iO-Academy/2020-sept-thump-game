@@ -44,19 +44,18 @@ const trumps = [
     '.trump06'
 ];
 
-let timeLeft = 5
+let timeLeft = 5;
 const inter = setInterval(() => {
     document.querySelector('.countdownTitle h1').textContent = timeLeft;
     timeLeft--
 }, 1000);
 
-let intervalId = setTimeout(() => {
+let timeoutId = setTimeout(() => {
     clearInterval(inter);
     document.querySelector('.countdownContainer').classList.add('endCountdown');
     randTrump();
-    let intervalId = setInterval(randTrump, 2000);
+    setInterval(randTrump, 2000);
     countdown();
-    return intervalId;
 }, 6000);
 
 /**
@@ -70,7 +69,7 @@ let randTrump = () => {
         setTimeout(() => {
             randomTrump.classList.remove('animate', randPosition);
         }, 1500)
-    }, randTime(500, 2000))
+    }, randTime(500, 2000));
 }
 
 let trumpsDiv = document.querySelectorAll('.trump');
@@ -104,7 +103,7 @@ let countdown = () => {
             trumpsDiv.forEach(trump => {
                 trump.hidden = true;
             })
-            clearInterval(intervalId);
+            clearInterval(timeoutId);
             modalContainer.style.visibility = 'visible';
             switch (true) {
                 case score === 0:
