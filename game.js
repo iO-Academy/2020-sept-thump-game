@@ -58,19 +58,19 @@ const trumps = [
     '.trump06'
 ];
 
-let timeLeft = 5
+let timeLeft = 5;
 const inter = setInterval(() => {
     document.querySelector('.countdownTitle h1').textContent = timeLeft;
     timeLeft--
 }, 1000);
 
-setTimeout(() => {
+let timeoutId = setTimeout(() => {
     clearInterval(inter);
     document.querySelector('.countdownContainer').classList.add('endCountdown');
-    countdown();
     randTrump();
+    setInterval(randTrump, 2000);
+    countdown();
 }, 6000);
-
 
 /**
  * Generates a single random trump appearance
@@ -85,8 +85,6 @@ let randTrump = () => {
         }, visibleTime(score))
     }, randTime(500, 2000))
 }
-
-let intervalId = setInterval(randTrump, 2000);
 
 let trumpsDiv = document.querySelectorAll('.trump');
 let score = 0;
@@ -119,7 +117,7 @@ let countdown = () => {
             trumpsDiv.forEach(trump => {
                 trump.hidden = true;
             })
-            clearInterval(intervalId);
+            clearInterval(timeoutId);
             modalContainer.style.visibility = 'visible';
             switch (true) {
                 case score === 0:
