@@ -425,6 +425,14 @@ header div {
   transform: translateY(-80%) rotate(10deg);
 }
 
+/*.trump:after {*/
+/*  content: url('images/bam.svg');*/
+/*  position: relative;*/
+/*  right: -100px;*/
+/*  z-index: 100;*/
+/*  !*display: none*!*/
+/*}*/
+
 .sky {
   position: absolute;
   width: 100%;

@@ -98,7 +98,23 @@ let score = 0;
 
 // Animates on click and adds to score
 trumpsDiv.forEach(trump =>
-  trump.addEventListener('click', () => {
+  trump.addEventListener('click',e => {
+      let x = e.clientX;
+      let y = e.clientY;
+      console.log(x)
+      console.log(y)
+      let bam = document.createElement('IMG');
+      bam.setAttribute("src", "images/bam.svg");
+      bam.style.position = 'fixed';
+      bam.style.height = 100 + 'px';
+      bam.style.width = 100 + 'px';
+      bam.style.top = y - 50 + 'px';
+      bam.style.left = x - 50 + 'px';
+      bam.style.zIndex = '10';
+      document.body.appendChild(bam);
+      setTimeout(() => {
+          document.body.removeChild(bam);
+      }, 500)
     if (trump.classList.contains('animate')) {
       trump.classList.remove('animate', 'animateLeft', 'animateRight', 'animateTop');
       score += 1;
@@ -137,7 +153,7 @@ let countdown = () => {
                     message = "You only got me once looooser";
                     gif.src = "https://media.giphy.com/media/wJNGA01o1Zxp6/source.gif";
                     break;
-                case score < 15:
+                case score < 10:
                     title = "DAAAMN";
                     message = `You thumped me ${score} times!`;
                     gif.src = "https://media.giphy.com/media/6L015gMEW3pFC/source.gif";
