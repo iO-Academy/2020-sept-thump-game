@@ -18,7 +18,7 @@ body {
   background-color: #008000;
   font-family: 'Rock Salt', cursive;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 header {
@@ -55,6 +55,7 @@ ol {
   transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  outline: none;
 }
 .startBtn:active {
   transform: scale(0.90);
@@ -168,4 +169,41 @@ section {
 
 .trump.animate {
   position: relative;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  display: flex;
+  visibility: hidden;
+  justify-content: space-around;
+  z-index: 15;
+}
+
+.modal {
+  width: 60%;
+  height: 80%;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.gif img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.newGame {
+  background: green;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.newGame:hover {
+  background-color: darkgreen;
+  filter: none;
 }
