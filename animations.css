@@ -110,11 +110,6 @@
     transform: rotate(10deg);
 }
 
-
-
-
-/* sky animation idea */
-
 .sky {
     position: absolute;
     width: 100%;
@@ -146,3 +141,4 @@
     0% { left: 0; }
     100%   { left: 100vw; }
 }
+
