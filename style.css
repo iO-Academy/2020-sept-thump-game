@@ -16,6 +16,9 @@ a {
 body {
   height: 100vh;
   background-color: #008000;
+  /* background-image: url('images/flag1.svg') space; */
+
+  /* background-position-x: right 32px; */
   font-family: 'Rock Salt', cursive;
   text-align: center;
   overflow-x: hidden;
@@ -115,6 +118,7 @@ section {
 .building {
   z-index: 5;
   pointer-events: none;
+  position: relative;
 }
 
 .trump01,
@@ -170,4 +174,28 @@ section {
 
 .trump.animate {
   position: relative;
+}
+
+.building01:before {
+  content: url('images/flag1.svg');
+  position: absolute;
+  left: -25%;
+  top: 70%;
+}
+.building02:before {
+  content: url('images/flag2.svg');
+  position: absolute;
+  right: -30%;
+}
+.building05:before {
+  content: url('images/flag3.svg');
+  position: absolute;
+  top: 40%;
+  left: -20%;
+}
+.building06:before {
+  content: url('images/flag4.svg');
+  position: absolute;
+  top: 3%;
+  right: -30%;
 }
