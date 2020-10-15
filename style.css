@@ -4,6 +4,10 @@
   margin: auto;
   box-sizing: border-box;
   font-family: 'Rock Salt', cursive;
+  cursor: url('images/club.cur'), pointer;
+}
+*:active {
+  cursor: url('images/club1.cur'), pointer;
 }
 
 a:visited,
@@ -94,7 +98,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 80%;
-  cursor: url('images/club.cur'), pointer;
 }
 
 section {
