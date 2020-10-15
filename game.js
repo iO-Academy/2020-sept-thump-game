@@ -50,13 +50,14 @@ const inter = setInterval(() => {
     timeLeft--
 }, 1000);
 
-setTimeout(() => {
+let intervalId = setTimeout(() => {
     clearInterval(inter);
     document.querySelector('.countdownContainer').classList.add('endCountdown');
-    countdown();
     randTrump();
+    let intervalId = setInterval(randTrump, 2000);
+    countdown();
+    return intervalId;
 }, 6000);
-
 
 /**
  * Generates a single random trump appearance
@@ -71,8 +72,6 @@ let randTrump = () => {
         }, 1500)
     }, randTime(500, 2000))
 }
-
-let intervalId = setInterval(randTrump, 2000);
 
 let trumpsDiv = document.querySelectorAll('.trump');
 let score = 0;
