@@ -101,8 +101,6 @@ trumpsDiv.forEach(trump =>
   trump.addEventListener('click',e => {
       let x = e.clientX;
       let y = e.clientY;
-      console.log(x)
-      console.log(y)
       let bam = document.createElement('IMG');
       bam.setAttribute("src", "images/bam.svg");
       bam.style.position = 'fixed';
