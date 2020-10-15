@@ -95,7 +95,7 @@ let score = 0;
 trumpsDiv.forEach(trump =>
   trump.addEventListener('click', () => {
     if (trump.classList.contains('animate')) {
-      trump.classList.remove('animate');
+      trump.classList.remove('animate', 'animateLeft', 'animateRight', 'animateTop');
       score += 1;
       document.querySelector('.score').textContent = score;
     }
