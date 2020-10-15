@@ -12,6 +12,15 @@ function randTime(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+/**
+ * Changes amount of time Trump is visible depending on score
+ *
+ * @param score
+ *             Current score
+ *
+ * @returns time
+ *             New length of time Trump is visible
+ */
 let visibleTime = function(score) {
     let time;
     if (score < 4) {
@@ -21,10 +30,8 @@ let visibleTime = function(score) {
     } else {
         time = 750;
     }
-    console.log(time);
     return time;
 }
-
 
 /**
  * Provides single random element from supplied array
