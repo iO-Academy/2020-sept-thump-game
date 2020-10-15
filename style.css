@@ -4,11 +4,11 @@
   margin: auto;
   box-sizing: border-box;
   font-family: 'Rock Salt', cursive;
-  cursor: url('images/club.cur'), pointer;
+  cursor: url('images/club.cur') 0 30, pointer;
 }
 
 *:active {
-  cursor: url('images/club1.cur'), pointer;
+  cursor: url('images/club1.cur') 0 30, pointer;
 }
 
 a:visited,
@@ -184,7 +184,7 @@ img {
 }
 
 .trump01 img {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(10%);
 }
 
 .trump02 img {
@@ -193,6 +193,10 @@ img {
 
 .trump05 img {
   transform: rotate(-40deg);
+}
+
+.trump06 img {
+  transform: translateY(10%);
 }
 
 .trump.animate {
@@ -283,6 +287,10 @@ header div {
   z-index: 4;
 }
 
+.modalContainer *, .countdownContainer * {
+  cursor: pointer;
+}
+
 .modalContainer, .countdownContainer {
   top: 0;
   width: 100%;
@@ -346,8 +354,7 @@ header div {
 }
 
 .trump01.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%) rotate(-45deg);
 }
 
 .trump01.animateRight {
@@ -359,12 +366,11 @@ header div {
 }
 
 .trump02.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-45deg);
+  transform: translateX(-80%) translateY(-30%) rotate(-45deg);
 }
 
 .trump02.animateRight {
-  transform: translateX(40%) translateY(-30%) rotate(45deg);
+  transform: translateX(80%) translateY(-30%) rotate(45deg);
 }
 
 .trump02.animateTop {
@@ -372,12 +378,11 @@ header div {
 }
 
 .trump03.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%) rotate(-45deg);
 }
 
 .trump03.animateRight {
-  transform: translateX(40%) translateY(-30%) rotate(45deg);
+  transform: translateX(80%) translateY(-30%) rotate(45deg);
 }
 
 .trump03.animateTop {
@@ -385,8 +390,7 @@ header div {
 }
 
 .trump04.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-45deg);
+  transform: translateX(-40%) translateY(-30%) rotate(-45deg);
 }
 
 .trump04.animateRight {
@@ -398,8 +402,7 @@ header div {
 }
 
 .trump05.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-80deg);
+  transform: translateX(-40%) translateY(-30%) rotate(-80deg);
 }
 
 .trump05.animateRight {
@@ -411,8 +414,7 @@ header div {
 }
 
 .trump06.animateLeft {
-  transform: translateX(-40%) translateY(-30%)
-  rotate(-20deg);
+  transform: translateX(-40%) translateY(-30%) rotate(-20deg);
 }
 
 .trump06.animateRight {
