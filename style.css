@@ -223,29 +223,33 @@ img {
 
 .gameOverButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.newGame, .backToMenu {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .newGame {
   background: #008000;
-  padding: 10px;
-  border-radius: 10px;
+}
+
+.newGame:hover, .backToMenu:hover {
+  filter: none;
 }
 
 .newGame:hover {
   background-color: #006400;
-  filter: none;
 }
 
 .backToMenu {
   background: #87cefa;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .backToMenu:hover {
   background-color: #00bfff;
-  filter: none;
 }
 
 .building01:before {
