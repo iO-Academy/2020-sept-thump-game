@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+.menuBody * {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   position: relative;
@@ -38,8 +42,8 @@ header {
 .menuScreen:after {
   content: url("images/flag4.svg");
   position: relative;
-  top: -145%;
-  right: -30%;
+  top: -80%;
+  right: -180%;
 }
 
 header span {
@@ -65,7 +69,7 @@ ol {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
-  grid-column-start: 2;
+  grid-area: b;
 }
 
 .startBtn:active {
@@ -83,7 +87,7 @@ ol {
 }
 
 .instructions {
-  grid-column-start: 2;
+  grid-area: d;
 }
 
 h1 {
@@ -92,11 +96,19 @@ h1 {
   line-height: 40px;
 }
 
+h3 {
+  margin: 20px;
+}
+
 .menuScreen {
   z-index: 10;
-  margin-top: 100px;
+  padding-top: 100px;
   display: grid;
+  text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'a b c'
+    'd d d';
 }
 
 .menuScreen div {
