@@ -221,14 +221,30 @@ img {
   object-fit: cover;
 }
 
+.gameOverButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .newGame {
-  background: green;
+  background: #008000;
   padding: 10px;
   border-radius: 10px;
 }
 
 .newGame:hover {
-  background-color: darkgreen;
+  background-color: #006400;
+  filter: none;
+}
+
+.backToMenu {
+  background: #87cefa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.backToMenu:hover {
+  background-color: #00bfff;
   filter: none;
 }
 
