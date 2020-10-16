@@ -216,8 +216,8 @@ img {
 }
 
 .gif img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -320,6 +320,7 @@ header div {
 }
 
 .modalContainer, .countdownContainer {
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -338,8 +339,7 @@ header div {
   flex-direction: column;
 }
 
-.modalContainer {
-  position: absolute;
+.modalContainer, .countdownContainer.endCountdown {
   visibility: hidden;
 }
 
@@ -347,22 +347,15 @@ header div {
   width: 60%;
   height: 80%;
   background-color: orange;
-  display: flex;
-  flex-direction: column;
 }
 
 .countdownContainer {
-  position: fixed;
   left: 0;
   align-content: center;
 }
 
 .countdown {
   align-items: center;
-}
-
-.countdownContainer.endCountdown {
-  display: none;
 }
 
 .countdown div {
