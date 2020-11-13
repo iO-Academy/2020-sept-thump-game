@@ -99,6 +99,7 @@ let score = 0;
 // Animates on click and adds to score
 trumpsDiv.forEach(trump =>
   trump.addEventListener('click',e => {
+    if (trump.classList.contains('animate')) {
       let x = e.clientX;
       let y = e.clientY;
       let bam = document.createElement('IMG');
@@ -113,7 +114,6 @@ trumpsDiv.forEach(trump =>
       setTimeout(() => {
           document.body.removeChild(bam);
       }, 500)
-    if (trump.classList.contains('animate')) {
       trump.classList.remove('animate', 'animateLeft', 'animateRight', 'animateTop');
       score += 1;
       document.querySelector('.score').textContent = score;

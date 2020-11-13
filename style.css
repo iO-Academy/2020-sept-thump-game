@@ -26,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+.menuBody * {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   position: relative;
@@ -38,8 +42,8 @@ header {
 .menuScreen:after {
   content: url("images/flag4.svg");
   position: relative;
-  top: -145%;
-  right: -30%;
+  top: -80%;
+  right: -180%;
 }
 
 header span {
@@ -65,7 +69,7 @@ ol {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
-  grid-column-start: 2;
+  grid-area: b;
 }
 
 .startBtn:active {
@@ -83,7 +87,7 @@ ol {
 }
 
 .instructions {
-  grid-column-start: 2;
+  grid-area: d;
 }
 
 h1 {
@@ -92,11 +96,19 @@ h1 {
   line-height: 40px;
 }
 
+h3 {
+  margin: 20px;
+}
+
 .menuScreen {
   z-index: 10;
-  margin-top: 100px;
+  padding-top: 100px;
   display: grid;
+  text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'a b c'
+    'd d d';
 }
 
 .menuScreen div {
@@ -204,20 +216,40 @@ img {
 }
 
 .gif img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.newGame {
-  background: green;
+.gameOverButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.newGame, .backToMenu {
   padding: 10px;
+  margin: 10px;
   border-radius: 10px;
 }
 
-.newGame:hover {
-  background-color: darkgreen;
+.newGame {
+  background: #008000;
+}
+
+.newGame:hover, .backToMenu:hover {
   filter: none;
+}
+
+.newGame:hover {
+  background-color: #006400;
+}
+
+.backToMenu {
+  background: #87cefa;
+}
+
+.backToMenu:hover {
+  background-color: #00bfff;
 }
 
 .building01:before {
@@ -256,7 +288,7 @@ footer p {
 }
 
 footer {
-  margin-top: 80px;
+  /*margin-top: 80px;*/
 }
 
 header div {
@@ -292,6 +324,7 @@ header div {
 }
 
 .modalContainer, .countdownContainer {
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -310,8 +343,7 @@ header div {
   flex-direction: column;
 }
 
-.modalContainer {
-  position: absolute;
+.modalContainer, .countdownContainer.endCountdown {
   visibility: hidden;
 }
 
@@ -319,22 +351,15 @@ header div {
   width: 60%;
   height: 80%;
   background-color: orange;
-  display: flex;
-  flex-direction: column;
 }
 
 .countdownContainer {
-  position: fixed;
   left: 0;
   align-content: center;
 }
 
 .countdown {
   align-items: center;
-}
-
-.countdownContainer.endCountdown {
-  display: none;
 }
 
 .countdown div {
